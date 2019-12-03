@@ -1,0 +1,24 @@
+kafka.bootstrap-server=kafka:9092
+kafka.zookeeper-server=zookeeper:2181
+
+datasource.url=jdbc:mysql://localhost:3306/DZ_DB?createDatabaseIfNotExist=true&rewriteBatchedStatements=true
+datasource.username=root
+datasource.password=
+datasource.driver=com.mysql.jdbc.Driver
+
+# if empty ,the value is taken from spark-submit
+spark.master=
+spark.sql-shuffle-partitions=5
+spark.processing-time=1000
+spark.checkpoint-location=
+
+app.persistence.topic-tables=TABLE1,TABLE2
+app.persistence.partial-key-topic-tables=TABLE3,TABLE4
+app.persistence.export-topic-prefix=EXPORT_
+app.persistence.income-topic-prefix=PERSISTENCE_
+app.process.income-topic=PROCESS
+app.process.error-topic=ERROR_LOG
+app.process.stream-source=kafka
+
+kinesis.region=us-east-1
+kinesis.stream-name=dz-dev-stream
